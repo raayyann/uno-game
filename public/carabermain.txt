@@ -1,0 +1,26 @@
+Keluarkan kartu sesuai dengan warna, angka, atau simbol kartu yang ada ditengah.
+
+Misal : kartu ditengah adalah 7 biru, maka ada 2 cara mengeluarkan kartu, kamu bisa keluarkan kartu biasa atau kartu aksi. Atau bisa juga memilih untuk mengambil 1 kartu (meskipun kamu punya kartu yang dapat dimainkan).
+
+- Kartu biasa
+Pemain pertama bisa mengeluarkan kartu dengan angka 7 atau kartu yang berwarna biru dengan angka apapun (sesuai yang di tengah).
+
+- Kartu aksi
+Selain kartu biasa, jika kamu mempunyai kartu aksi seperti yang sudah dijelaskan tadi, kamu juga bisa mengeluarkannya.
+
+Namun, khusus kartu aksi ini karena tidak ada angkanya jadi kamu harus mengeluarkan sesuai warnanya, atau bisa juga keluarkan kartu hitam (yang bisa dipakai semua warna : wild dan +4).
+
+Kan tadi kartu yang di tengah 7 biru, berarti kamu bisa mengeluarkan skip biru, +2 biru, reverse biru, +4, atau wild jika mempunyai salah satu dari kartu tersebut ditanganmu.
+
+- Jika tidak memiliki kartu
+Jika kamu tidak memiliki kartu berwarna biru, +4, wild, ataupun kartu berangka 7 sama sekali, silahkan ambil 1 kartu yang ada pada tumpukan tengah.
+
+Setelah mengambil 1 kartu, baik kartu itu bisa dikeluarkan atau tidak, kamu tetap tidak boleh mengeluarkannya. Giliran bermain akan langsung berlanjut setelah kamu mengambil 1 kartu pada tumpukan kartu.
+
+Penggunaan Kartu Aksi
+- Skip = Maka kamu tidak bisa bermain, yang artinya giliran langsung diberikan kepada pemain ketiga.
+- Wild = Maka kamu harus mengeluarkan kartu yang sesuai dengan warna yang ditentukan pemain pertama.
+- Draw two (+2) = Kamu harus mengambil 2 kartu dan tidak bisa mengeluarkan kartu.
+- Wild draw four (+4) = Maka kamu harus mengambil 4 kartu
+
+Pemain akan menang jika kartunya habis
