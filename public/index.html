@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <title>Uno Game</title>
+    </head>
+    <body class="bg-dark text-light">
+        <div id="start" class="container mt-5">
+            <h1>Uno Game</h1>
+            <div class="row">
+                <div class="col-lg-10">
+                    <input
+                        type="text"
+                        id="room-name-input"
+                        class="form-control"
+                        placeholder="Nama Room"
+                    />
+                </div>
+                <div class="col-lg-2">
+                    <button id="join-room" class="form-control">
+                        Masuk Room
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="room" class="container mt-5" style="display: none">
+            <h1 id="room-name">Room -</h1>
+            <ul class="list-group" id="player-list">
+                <!-- <li class="list-group-item"></li> -->
+            </ul>
+            <button
+                id="start-game"
+                class="btn btn-light mt-3 w-100"
+                style="display: none"
+            >
+                Mulai
+            </button>
+        </div>
+        <div id="game" class="container mt-5" style="display: none">
+            <h1>Game</h1>
+            <div class="row">
+                <div class="col-2">
+                    <img
+                        id="discarded-card"
+                        src="img/cards/0-0.png"
+                        width="100%"
+                    />
+                </div>
+                <div class="col-2">
+                    <img id="draw" src="img/cards/uno.png" width="100%" />
+                </div>
+            </div>
+            <ul class="list-group mt-2" id="card-count">
+                <!-- <li class="list-group-item">A - 7 Kartu</li> -->
+            </ul>
+            <div class="alert alert-success mt-2" role="alert" id="msg"></div>
+            <div class="card mt-2">
+                <div class="card-body">
+                    <div class="row" id="card-list">
+                        <!-- <div class="col-1" id="card-0">
+                            <img src="img/cards/0-0.png" width="100%" />
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="socket.io/socket.io.js"></script>
+        <script src="js/sweetalert.min.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
