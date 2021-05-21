@@ -35,6 +35,8 @@ const cardCount = document.querySelector("#card-count");
 const msg = document.querySelector("#msg");
 const draw = document.querySelector("#draw");
 
+let end = false;
+
 // Event Listener
 
 joinRoom.addEventListener("click", () => {
@@ -85,11 +87,13 @@ socket.on("start", () => {
 });
 
 socket.on("dc", () => {
-    swal({
-        title: "Seseorang terputus dari server",
-    }).then(() => {
-        window.location.reload();
-    });
+    if (!end) {
+        swal({
+            title: "Seseorang terputus dari server",
+        }).then(() => {
+            window.location.reload();
+        });
+    }
 });
 
 socket.on("alert", (data) => {
@@ -154,6 +158,7 @@ socket.on("updateCardsCount", (data) => {
 });
 
 socket.on("end", (data) => {
+    end = true;
     swal({
         title: "Permainan Berakhir",
         text: data + " memenangkan permainan",
