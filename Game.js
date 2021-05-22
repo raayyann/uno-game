@@ -62,7 +62,12 @@ class Game {
                     this.updateCards(p);
                 } else {
                     if (c[1] === 11) {
-                        this.reverse = !this.reverse;
+                        if (this.players.length > 2) {
+                            this.reverse = !this.reverse;
+                        } else {
+                            this.updateTurn();
+                            this.updateTurn();
+                        }
                     }
                     if (c[1] === 10) {
                         this.updateTurn();
