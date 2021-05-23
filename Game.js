@@ -66,7 +66,6 @@ class Game {
                             this.reverse = !this.reverse;
                         } else {
                             this.updateTurn();
-                            this.updateTurn();
                         }
                     }
                     if (c[1] === 10) {
