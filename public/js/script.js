@@ -8,7 +8,7 @@ swal({
         closeModal: false,
     },
 }).then((name) => {
-    if (!name.trim()) return;
+    if (!name.trim()) return swal.stopLoading();
     socket.emit("name", name);
     swal.close();
 });
