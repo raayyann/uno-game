@@ -1,17 +1,19 @@
 const socket = io();
 
-swal({
-    title: "Masukan Nama Anda",
-    content: "input",
-    button: {
-        text: "Masuk",
-        closeModal: false,
-    },
-}).then((name) => {
-    if (!name.trim()) return swal.stopLoading();
-    socket.emit("name", name);
-    swal.close();
-});
+const enterName = () => {
+    swal({
+        title: "Masukan Nama Anda",
+        content: "input",
+        button: {
+            text: "Masuk",
+            closeModal: false,
+        },
+    }).then((name) => {
+        if (!name || !name.trim()) return;
+        socket.emit("name", name);
+        swal.close();
+    });
+};
 
 const start = document.querySelector("#start");
 const room = document.querySelector("#room");
