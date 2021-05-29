@@ -55,6 +55,8 @@ io.on("connection", (socket) => {
                         });
                         new Game(room);
                         delete rooms[socket.roomName];
+                    } else {
+                        socket.emit("startError", "Pemain tidak cukup");
                     }
                 }
             }

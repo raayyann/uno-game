@@ -8,7 +8,7 @@ swal({
         closeModal: false,
     },
 }).then((name) => {
-    if (!name) return window.location.reload();
+    if (!name.trim()) return;
     socket.emit("name", name);
     swal.close();
 });
@@ -40,11 +40,10 @@ let end = false;
 // Event Listener
 
 joinRoom.addEventListener("click", () => {
-    if (roomNameInput.value != "") {
-        joinRoom.style.display = "none";
-        roomName.textContent = "Room - " + roomNameInput.value;
-        socket.emit("joinRoom", roomNameInput.value);
-    }
+    if (!roomNameInput.value.trim()) return;
+    joinRoom.style.display = "none";
+    roomName.textContent = "Room - " + roomNameInput.value;
+    socket.emit("joinRoom", roomNameInput.value);
 });
 
 startGame.addEventListener("click", () => {
@@ -71,6 +70,14 @@ socket.on("joinError", (data) => {
         text: data,
     });
     joinRoom.style.display = "block";
+});
+
+socket.on("startError", (data) => {
+    swal({
+        title: "Tidak bisa memulai game",
+        text: data,
+    });
+    startGame.style.display = "block";
 });
 
 socket.on("updateUser", (data) => {
