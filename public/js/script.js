@@ -9,11 +9,12 @@ const enterName = () => {
             closeModal: false,
         },
     }).then((name) => {
-        if (!name || !name.trim()) return;
+        if (!name || !name.trim()) return enterName();
         socket.emit("name", name);
         swal.close();
     });
 };
+enterName();
 
 const start = document.querySelector("#start");
 const room = document.querySelector("#room");
